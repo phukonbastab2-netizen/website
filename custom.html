@@ -1,438 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create Your Custom Papercraft | 1rs.shop</title>
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>About 1rs.shop</title>
 
 <meta
   name="description"
-  content="Turn your photo into a personalised physical papercraft printed on A5 paper and delivered to you."
+  content="1rs.shop turns simple sheets of paper into tiny worlds."
+>
+
+<link
+  rel="stylesheet"
+  href="assets/style.css"
 >
 
 <style>
 
-:root{
-  --paper:#f6f1e7;
-  --white:#fffdf8;
-  --ink:#171717;
-  --muted:#777269;
-  --orange:#ff5c35;
-  --orange-dark:#d94120;
-  --yellow:#f2c94c;
-  --green:#7da26c;
-  --line:rgba(23,23,23,.10);
-  --max:1240px;
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:
-    radial-gradient(circle at 15% 5%,rgba(255,255,255,.95),transparent 28%),
-    radial-gradient(circle at 85% 25%,rgba(255,255,255,.65),transparent 32%),
-    var(--paper);
-
-  color:var(--ink);
-
-  font-family:Arial,Helvetica,sans-serif;
-
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,
-input,
-select{
-  font:inherit;
-}
-
-
 /* =========================================================
-NAV
+ABOUT PAGE
 ========================================================= */
 
-.nav{
-  position:fixed;
+.about-hero{
 
-  top:18px;
-  left:50%;
-
-  transform:translateX(-50%);
-
-  width:min(calc(100% - 32px),1180px);
-
-  z-index:1000;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:space-between;
-
-  padding:12px 14px 12px 20px;
-
-  background:rgba(255,253,248,.86);
-
-  backdrop-filter:blur(18px);
-
-  border:1px solid var(--line);
-
-  border-radius:22px;
-
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.08),
-    inset 0 1px rgba(255,255,255,.9);
-}
-
-.logo{
-  font-size:22px;
-  font-weight:950;
-  letter-spacing:-1.5px;
-}
-
-.logo span{
-  color:var(--orange);
-}
-
-.nav-links{
-  display:flex;
-  gap:28px;
-  align-items:center;
-
-  font-size:14px;
-  font-weight:700;
-}
-
-.nav-links a{
-  opacity:.65;
-}
-
-.nav-links a:hover{
-  opacity:1;
-}
-
-.nav-button{
-  padding:11px 17px;
-
-  background:var(--ink);
-  color:white;
-
-  border-radius:13px;
-
-  font-size:13px;
-  font-weight:900;
-}
-
-
-/* =========================================================
-PAGE
-========================================================= */
-
-.page{
-  max-width:var(--max);
+  max-width:1240px;
 
   margin:auto;
 
   padding:
-    155px 28px 100px;
-}
+    160px 28px 100px;
 
+  display:grid;
 
-/* =========================================================
-HEADER
-========================================================= */
+  grid-template-columns:
+    1.05fr .95fr;
 
-.header{
-  text-align:center;
-
-  max-width:800px;
-
-  margin:
-    0 auto 70px;
-}
-
-.badge{
-  display:inline-flex;
+  gap:70px;
 
   align-items:center;
 
-  gap:8px;
-
-  padding:8px 14px;
-
-  background:white;
-
-  border:1px solid var(--line);
-
-  border-radius:100px;
-
-  font-size:12px;
-  font-weight:900;
-
-  box-shadow:
-    0 5px 18px rgba(0,0,0,.05);
 }
 
-.dot{
-  width:8px;
-  height:8px;
+.about-hero h1{
 
-  background:var(--orange);
-
-  border-radius:50%;
-}
-
-.header h1{
   margin-top:25px;
 
   font-size:
-    clamp(52px,7vw,90px);
+    clamp(58px,8vw,105px);
 
-  line-height:.86;
+  line-height:.82;
 
-  letter-spacing:-6px;
+  letter-spacing:-7px;
 
   font-weight:950;
+
 }
 
-.header h1 span{
+.about-hero h1 span{
+
   color:var(--orange);
+
 }
 
-.header p{
-  max-width:600px;
+.about-hero p{
 
-  margin:25px auto 0;
+  max-width:570px;
+
+  margin-top:30px;
 
   color:var(--muted);
 
-  font-size:17px;
+  font-size:18px;
 
-  line-height:1.6;
+  line-height:1.65;
+
 }
 
 
 /* =========================================================
-CREATOR
+PAPER SCENE
 ========================================================= */
 
-.creator{
+.about-scene{
+
+  position:relative;
+
+  height:520px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  perspective:1000px;
+
+}
+
+.big-paper{
+
+  width:320px;
+
+  height:410px;
+
+  background:#fffdf7;
+
+  border:2px solid #222;
+
+  position:relative;
+
+  transform:
+    rotate(-7deg)
+    rotateX(5deg);
+
+  box-shadow:
+
+    20px 25px 0 rgba(0,0,0,.06),
+
+    30px 40px 55px rgba(0,0,0,.16);
+
+  transition:.5s;
+
+}
+
+.about-scene:hover .big-paper{
+
+  transform:
+    rotate(1deg)
+    translateY(-12px);
+
+}
+
+.big-paper::after{
+
+  content:"";
+
+  position:absolute;
+
+  right:0;
+
+  top:0;
+
+  width:65px;
+
+  height:65px;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49%,
+      #e7ded0 50%
+    );
+
+  border-left:1px solid #333;
+
+  border-bottom:1px solid #333;
+
+}
+
+
+/* paper artwork */
+
+.paper-world{
+
+  position:absolute;
+
+  inset:45px;
+
+  border:2px dashed #aaa;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-direction:column;
+
+}
+
+.paper-world-icon{
+
+  font-size:105px;
+
+  filter:
+    drop-shadow(
+      10px 15px 6px rgba(0,0,0,.15)
+    );
+
+}
+
+.paper-world-title{
+
+  margin-top:20px;
+
+  font-size:12px;
+
+  font-weight:950;
+
+  letter-spacing:2px;
+
+}
+
+
+/* floating pieces */
+
+.paper-piece{
+
+  position:absolute;
+
+  font-size:55px;
+
+  filter:
+    drop-shadow(
+      8px 12px 7px rgba(0,0,0,.12)
+    );
+
+}
+
+.piece-one{
+
+  left:0;
+
+  top:70px;
+
+  transform:rotate(-20deg);
+
+}
+
+.piece-two{
+
+  right:5px;
+
+  bottom:85px;
+
+  transform:rotate(15deg);
+
+}
+
+.piece-three{
+
+  left:25px;
+
+  bottom:40px;
+
+  transform:rotate(12deg);
+
+}
+
+
+/* =========================================================
+STORY
+========================================================= */
+
+.story{
+
+  max-width:1240px;
+
+  margin:auto;
+
+  padding:
+    90px 28px;
+
+}
+
+.story-grid{
+
   display:grid;
 
   grid-template-columns:
     1fr 1fr;
 
-  gap:30px;
+  gap:25px;
 
-  align-items:stretch;
 }
 
+.story-card{
 
-/* =========================================================
-UPLOAD CARD
-========================================================= */
-
-.upload-card{
   background:var(--white);
 
   border:1px solid var(--line);
 
-  padding:30px;
+  padding:45px;
 
   box-shadow:
-    10px 15px 0 rgba(0,0,0,.035),
-    0 20px 40px rgba(0,0,0,.06);
+
+    8px 12px 0 rgba(0,0,0,.035),
+
+    0 18px 35px rgba(0,0,0,.06);
+
 }
 
-.card-label{
-  color:var(--orange);
+.story-card:nth-child(2){
 
-  font-size:11px;
+  transform:rotate(1deg);
 
-  font-weight:950;
-
-  letter-spacing:1px;
 }
 
-.upload-card h2{
-  margin-top:12px;
+.story-card:nth-child(3){
 
-  font-size:32px;
+  transform:rotate(-1deg);
 
-  letter-spacing:-2px;
 }
 
-.upload-card > p{
-  margin-top:10px;
+.story-card h2{
+
+  font-size:
+    clamp(35px,4vw,55px);
+
+  line-height:.9;
+
+  letter-spacing:-3px;
+
+}
+
+.story-card p{
+
+  margin-top:22px;
 
   color:var(--muted);
 
-  font-size:14px;
+  font-size:15px;
 
-  line-height:1.5;
+  line-height:1.7;
+
 }
 
 
 /* =========================================================
-DROPZONE
+MISSION
 ========================================================= */
 
-.dropzone{
+.mission{
+
+  max-width:1240px;
+
+  margin:
+    60px auto 110px;
+
+  padding:
+    0 28px;
+
+}
+
+.mission-box{
+
   position:relative;
 
-  margin-top:25px;
-
-  min-height:300px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-
-  border:2px dashed rgba(23,23,23,.18);
-
-  background:
-    radial-gradient(
-      circle at 50% 25%,
-      white,
-      transparent 55%
-    ),
-    #eee5d5;
-
-  transition:.25s;
-
-  cursor:pointer;
-}
-
-.dropzone:hover,
-.dropzone.dragover{
-  border-color:var(--orange);
-
-  background:
-    radial-gradient(
-      circle at 50% 25%,
-      white,
-      transparent 55%
-    ),
-    #f3e3d9;
-}
-
-.upload-icon{
-  width:76px;
-  height:76px;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  background:white;
-
-  border:1px solid var(--line);
-
-  border-radius:22px;
-
-  font-size:38px;
-
-  box-shadow:
-    8px 10px 0 rgba(0,0,0,.05);
-}
-
-.dropzone h3{
-  margin-top:20px;
-
-  font-size:19px;
-}
-
-.dropzone p{
-  margin-top:7px;
-
-  color:var(--muted);
-
-  font-size:13px;
-}
-
-.upload-button{
-  margin-top:18px;
-
-  padding:12px 18px;
+  overflow:hidden;
 
   background:var(--ink);
 
   color:white;
 
-  border:0;
+  padding:75px;
 
-  border-radius:13px;
-
-  font-size:13px;
-
-  font-weight:900;
-}
-
-#fileInput{
-  display:none;
-}
-
-.file-name{
-  margin-top:12px;
-
-  color:var(--orange);
-
-  font-size:12px;
-
-  font-weight:800;
-}
-
-
-/* =========================================================
-PREVIEW
-========================================================= */
-
-.preview-card{
-  position:relative;
-
-  min-height:600px;
-
-  padding:30px;
-
-  overflow:hidden;
-
-  background:#171717;
-
-  color:white;
+  border-radius:32px;
 
   box-shadow:
-    0 30px 65px rgba(0,0,0,.18);
+    0 30px 70px rgba(0,0,0,.18);
+
 }
 
-.preview-card::before{
+.mission-box::after{
+
   content:"";
 
   position:absolute;
 
-  width:430px;
-  height:430px;
+  right:-150px;
 
-  right:-160px;
-  top:-160px;
+  top:-150px;
+
+  width:430px;
+
+  height:430px;
 
   background:var(--orange);
 
@@ -443,250 +391,92 @@ PREVIEW
       100% 100%,
       0 50%
     );
+
 }
 
-.preview-top{
+.mission-content{
+
   position:relative;
 
   z-index:2;
 
-  display:flex;
+  max-width:780px;
 
-  align-items:center;
-  justify-content:space-between;
-
-  gap:15px;
 }
 
-.preview-top span{
+.mission-label{
+
   color:#ff9a82;
 
-  font-size:11px;
+  font-size:12px;
 
   font-weight:950;
 
   letter-spacing:1px;
+
 }
 
-.preview-status{
-  padding:7px 10px;
+.mission-box h2{
 
-  background:rgba(255,255,255,.10);
+  margin-top:18px;
 
-  border-radius:10px;
+  font-size:
+    clamp(45px,6vw,78px);
 
-  color:#c8c5bf;
+  line-height:.88;
 
-  font-size:10px;
+  letter-spacing:-5px;
 
-  font-weight:800;
 }
 
+.mission-box p{
 
-/* =========================================================
-PAPER PREVIEW
-========================================================= */
+  max-width:620px;
 
-.preview-world{
-  position:relative;
+  margin-top:28px;
 
-  height:430px;
+  color:#bdbab3;
 
-  display:flex;
+  font-size:16px;
 
-  align-items:center;
-  justify-content:center;
+  line-height:1.65;
 
-  perspective:1000px;
-}
-
-.paper-sheet{
-  position:relative;
-
-  width:300px;
-  height:380px;
-
-  background:#fffdf7;
-
-  border:2px solid #292929;
-
-  color:#171717;
-
-  transform:
-    rotate(-5deg)
-    rotateX(5deg);
-
-  box-shadow:
-    20px 25px 0 rgba(0,0,0,.15),
-    30px 40px 50px rgba(0,0,0,.30);
-
-  transition:.5s;
-
-  display:flex;
-
-  align-items:center;
-  justify-content:center;
-
-  overflow:hidden;
-}
-
-.preview-card:hover .paper-sheet{
-  transform:
-    rotate(0deg)
-    rotateX(0deg)
-    translateY(-8px);
-}
-
-.paper-fold{
-  position:absolute;
-
-  top:0;
-  right:0;
-
-  width:65px;
-  height:65px;
-
-  background:
-    linear-gradient(
-      135deg,
-      transparent 49%,
-      #ded5c7 50%
-    );
-
-  border-left:1px solid #333;
-  border-bottom:1px solid #333;
-}
-
-.placeholder-art{
-  text-align:center;
-}
-
-.placeholder-art .person{
-  font-size:105px;
-
-  filter:
-    drop-shadow(
-      8px 12px 5px rgba(0,0,0,.12)
-    );
-}
-
-.placeholder-art p{
-  margin-top:20px;
-
-  color:#777;
-
-  font-size:12px;
-
-  font-weight:800;
-}
-
-#photoPreview{
-  position:absolute;
-
-  inset:0;
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  display:none;
-}
-
-.preview-caption{
-  position:absolute;
-
-  bottom:20px;
-  left:20px;
-  right:20px;
-
-  padding:12px;
-
-  background:rgba(23,23,23,.82);
-
-  color:white;
-
-  font-size:11px;
-
-  text-align:center;
-
-  border-radius:10px;
-
-  backdrop-filter:blur(8px);
 }
 
 
 /* =========================================================
-OPTIONS
+VALUES
 ========================================================= */
 
-.options{
-  margin-top:30px;
+.values{
 
-  display:grid;
+  max-width:1240px;
 
-  grid-template-columns:
-    repeat(3,1fr);
+  margin:auto;
 
-  gap:10px;
+  padding:
+    20px 28px 110px;
+
 }
 
-.option{
-  padding:15px;
+.values-heading{
 
-  background:white;
+  margin-bottom:45px;
 
-  color:var(--ink);
-
-  border:1px solid rgba(255,255,255,.15);
-
-  cursor:pointer;
-
-  transition:.2s;
 }
 
-.option:hover{
-  transform:translateY(-3px);
+.values-heading h2{
+
+  font-size:
+    clamp(42px,5vw,68px);
+
+  line-height:.9;
+
+  letter-spacing:-4px;
+
 }
 
-.option.active{
-  border:2px solid var(--orange);
-
-  padding:14px;
-}
-
-.option-icon{
-  font-size:25px;
-}
-
-.option strong{
-  display:block;
-
-  margin-top:8px;
-
-  font-size:13px;
-}
-
-.option small{
-  display:block;
-
-  margin-top:4px;
-
-  color:#777;
-
-  font-size:10px;
-}
-
-
-/* =========================================================
-PRICING
-========================================================= */
-
-.pricing{
-  max-width:var(--max);
-
-  margin:
-    80px auto 0;
+.values-grid{
 
   display:grid;
 
@@ -694,195 +484,117 @@ PRICING
     repeat(3,1fr);
 
   gap:18px;
+
 }
 
-.plan{
-  position:relative;
+.value{
 
   background:white;
 
   border:1px solid var(--line);
 
-  padding:28px;
+  padding:30px;
+
+  min-height:240px;
 
   box-shadow:
-    8px 12px 0 rgba(0,0,0,.035),
-    0 15px 30px rgba(0,0,0,.05);
+    7px 10px 0 rgba(0,0,0,.035);
 
   transition:.3s;
+
 }
 
-.plan:hover{
+.value:hover{
+
   transform:
-    translateY(-7px)
+    translateY(-8px)
     rotate(-1deg);
+
 }
 
-.plan.featured{
-  background:var(--ink);
+.value-icon{
 
-  color:white;
+  font-size:45px;
 
-  transform:
-    translateY(-10px);
 }
 
-.plan.featured:hover{
-  transform:
-    translateY(-16px)
-    rotate(-1deg);
-}
-
-.popular{
-  position:absolute;
-
-  top:15px;
-  right:15px;
-
-  padding:6px 9px;
-
-  background:var(--orange);
-
-  color:white;
-
-  border-radius:8px;
-
-  font-size:9px;
-
-  font-weight:950;
-}
-
-.plan-label{
-  color:var(--orange);
-
-  font-size:11px;
-
-  font-weight:950;
-
-  letter-spacing:1px;
-}
-
-.plan h3{
-  margin-top:12px;
-
-  font-size:23px;
-
-  letter-spacing:-1px;
-}
-
-.plan-price{
-  margin-top:18px;
-
-  font-size:42px;
-
-  font-weight:950;
-
-  letter-spacing:-3px;
-}
-
-.plan-price span{
-  font-size:13px;
-
-  color:var(--muted);
-
-  letter-spacing:0;
-}
-
-.plan.featured .plan-price span{
-  color:#aaa;
-}
-
-.plan ul{
-  list-style:none;
+.value h3{
 
   margin-top:20px;
 
-  display:grid;
+  font-size:21px;
 
-  gap:10px;
 }
 
-.plan li{
+.value p{
+
+  margin-top:10px;
+
   color:var(--muted);
 
-  font-size:13px;
-}
+  font-size:14px;
 
-.plan.featured li{
-  color:#c5c2bc;
-}
+  line-height:1.55;
 
-.plan li::before{
-  content:"✓";
-
-  color:var(--green);
-
-  font-weight:900;
-
-  margin-right:8px;
-}
-
-.plan-button{
-  display:block;
-
-  margin-top:25px;
-
-  padding:14px;
-
-  text-align:center;
-
-  background:var(--ink);
-
-  color:white;
-
-  border-radius:13px;
-
-  font-size:12px;
-
-  font-weight:900;
-}
-
-.plan.featured .plan-button{
-  background:white;
-
-  color:var(--ink);
 }
 
 
 /* =========================================================
-INFO STRIP
+NUMBERS
 ========================================================= */
 
-.info-strip{
-  margin-top:70px;
+.numbers{
+
+  max-width:1240px;
+
+  margin:auto;
+
+  padding:
+    0 28px 110px;
+
+}
+
+.number-grid{
 
   display:grid;
 
   grid-template-columns:
     repeat(4,1fr);
 
-  gap:1px;
+  border-top:1px solid var(--line);
 
-  background:var(--line);
+  border-bottom:1px solid var(--line);
 
-  border:1px solid var(--line);
 }
 
-.info-item{
-  padding:24px;
+.number{
 
-  background:var(--white);
+  padding:35px 20px;
 
   text-align:center;
+
+  border-right:1px solid var(--line);
+
 }
 
-.info-item strong{
+.number:last-child{
+
+  border-right:0;
+
+}
+
+.number strong{
+
   display:block;
 
-  font-size:14px;
+  font-size:42px;
+
+  letter-spacing:-3px;
+
 }
 
-.info-item span{
+.number span{
+
   display:block;
 
   margin-top:5px;
@@ -890,27 +602,34 @@ INFO STRIP
   color:var(--muted);
 
   font-size:11px;
+
+  font-weight:800;
+
 }
 
 
 /* =========================================================
-FOOTER
+CTA
 ========================================================= */
 
-footer{
-  margin-top:100px;
+.about-cta{
 
-  padding:
-    60px 28px
-    35px;
-
-  border-top:1px solid var(--line);
-}
-
-.footer{
-  max-width:var(--max);
+  max-width:1240px;
 
   margin:auto;
+
+  padding:
+    0 28px 120px;
+
+}
+
+.cta-box{
+
+  background:white;
+
+  border:1px solid var(--line);
+
+  padding:55px;
 
   display:flex;
 
@@ -918,25 +637,57 @@ footer{
 
   justify-content:space-between;
 
-  gap:30px;
+  gap:35px;
+
+  box-shadow:
+    10px 15px 0 rgba(0,0,0,.035);
+
 }
 
-.footer-logo{
-  font-size:25px;
+.cta-box h2{
 
-  font-weight:950;
+  font-size:
+    clamp(38px,5vw,60px);
 
-  letter-spacing:-2px;
+  line-height:.9;
+
+  letter-spacing:-4px;
+
 }
 
-.footer-logo span{
-  color:var(--orange);
-}
+.cta-box p{
 
-.footer-text{
+  margin-top:15px;
+
   color:var(--muted);
 
+}
+
+.cta-button{
+
+  flex-shrink:0;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:16px 22px;
+
+  background:var(--orange);
+
+  color:white;
+
+  border-radius:14px;
+
   font-size:13px;
+
+  font-weight:900;
+
+  box-shadow:
+    0 5px 0 var(--orange-dark);
+
 }
 
 
@@ -944,90 +695,173 @@ footer{
 RESPONSIVE
 ========================================================= */
 
-@media(max-width:950px){
+@media(max-width:900px){
 
-  .creator{
+  .about-hero{
+
     grid-template-columns:1fr;
+
+    text-align:center;
+
   }
 
-  .pricing{
-    grid-template-columns:
-      repeat(2,1fr);
+  .about-hero p{
+
+    margin-left:auto;
+
+    margin-right:auto;
+
   }
 
-  .info-strip{
+  .story-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .values-grid{
+
     grid-template-columns:
       repeat(2,1fr);
+
+  }
+
+  .number-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .number{
+
+    border-bottom:1px solid var(--line);
+
+  }
+
+  .cta-box{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
   }
 
 }
 
-@media(max-width:650px){
 
-  .nav{
-    top:10px;
-  }
+@media(max-width:600px){
 
-  .nav-links{
-    display:none;
-  }
+  .about-hero{
 
-  .page{
     padding:
-      125px 18px 70px;
+      130px 18px 70px;
+
   }
 
-  .header h1{
-    letter-spacing:-4px;
+  .about-hero h1{
+
+    letter-spacing:-5px;
+
   }
 
-  .upload-card,
-  .preview-card{
-    padding:22px;
+  .about-scene{
+
+    height:400px;
+
   }
 
-  .preview-card{
-    min-height:540px;
+  .big-paper{
+
+    width:250px;
+
+    height:330px;
+
   }
 
-  .paper-sheet{
-    width:235px;
-    height:300px;
+  .paper-world{
+
+    inset:30px;
+
   }
 
-  .preview-world{
-    height:350px;
+  .paper-world-icon{
+
+    font-size:75px;
+
   }
 
-  .placeholder-art .person{
-    font-size:80px;
+  .story{
+
+    padding:
+      60px 18px;
+
   }
 
-  .options{
+  .story-card{
+
+    padding:30px;
+
+  }
+
+  .mission{
+
+    padding:
+      0 15px;
+
+  }
+
+  .mission-box{
+
+    padding:45px 25px;
+
+    border-radius:24px;
+
+  }
+
+  .values{
+
+    padding:
+      20px 18px 80px;
+
+  }
+
+  .values-grid{
+
     grid-template-columns:1fr;
+
   }
 
-  .pricing{
-    grid-template-columns:1fr;
+  .numbers{
+
+    padding:
+      0 18px 80px;
+
   }
 
-  .plan.featured{
-    transform:none;
+  .number strong{
+
+    font-size:32px;
+
   }
 
-  .info-strip{
-    grid-template-columns:1fr;
+  .about-cta{
+
+    padding:
+      0 15px 80px;
+
   }
 
-  .footer{
-    flex-direction:column;
+  .cta-box{
 
-    align-items:flex-start;
+    padding:40px 25px;
+
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -1035,14 +869,18 @@ RESPONSIVE
 
 
 <!-- =====================================================
-NAV
+NAVIGATION
 ===================================================== -->
 
-<nav class="nav">
+<nav class="site-nav">
 
-  <a href="index.html" class="logo">
+  <a
+    href="index.html"
+    class="logo"
+  >
     1rs<span>.</span>shop
   </a>
+
 
   <div class="nav-links">
 
@@ -1064,11 +902,12 @@ NAV
 
   </div>
 
+
   <a
     href="products.html"
-    class="nav-button"
+    class="btn btn-dark"
   >
-    ₹1 Papercrafts
+    Shop ₹1
   </a>
 
 </nav>
@@ -1076,496 +915,501 @@ NAV
 
 
 <!-- =====================================================
-PAGE
+HERO
 ===================================================== -->
 
-<main class="page">
+<section class="about-hero">
 
 
-  <!-- HEADER -->
+  <div>
 
-  <header class="header">
+    <div class="eyebrow">
 
-    <div class="badge">
+      <span class="eyebrow-dot"></span>
 
-      <span class="dot"></span>
-
-      CUSTOM PAPERCRAFT STUDIO
+      THE STORY OF 1RS.SHOP
 
     </div>
 
 
     <h1>
 
-      MAKE IT<br>
+      PAPER IS<br>
 
-      <span>YOURS.</span>
+      <span>ENOUGH.</span>
 
     </h1>
 
 
     <p>
 
-      Give us a photo and we'll turn the idea into
-      a personalised papercraft printed on A5 paper
-      and delivered to your door.
+      We believe you don't need expensive materials
+      to make something worth keeping.
+
+      One sheet of paper can become a house,
+      a character, a vehicle, a gift or an entire
+      little world.
 
     </p>
 
-  </header>
+  </div>
 
 
 
-  <!-- ===================================================
-  CREATOR
-  ==================================================== -->
+  <!-- PAPER -->
 
-  <section class="creator">
+  <div class="about-scene">
+
+    <div class="paper-piece piece-one">
+      ✂️
+    </div>
+
+    <div class="paper-piece piece-two">
+      ⭐
+    </div>
+
+    <div class="paper-piece piece-three">
+      📄
+    </div>
 
 
-    <!-- UPLOAD -->
+    <div class="big-paper">
 
-    <div class="upload-card">
+      <div class="paper-world">
 
-      <div class="card-label">
-        STEP 01 · YOUR PHOTO
+        <div class="paper-world-icon">
+          🏠
+        </div>
+
+        <div class="paper-world-title">
+          MADE FROM ONE SHEET
+        </div>
+
       </div>
 
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+STORY
+===================================================== -->
+
+<section class="story">
+
+
+  <div class="story-grid">
+
+
+    <article class="story-card">
+
       <h2>
-        Start with a picture.
+        Start<br>
+        small.
       </h2>
 
       <p>
-        Choose a clear photo. A front-facing photo
-        usually gives the best result.
+
+        1rs.shop begins with an intentionally
+        unusual idea: make papercraft accessible
+        to almost everyone.
+
+        The ₹1 entry point isn't about making
+        paper less valuable. It's about removing
+        the hesitation to try something new.
+
       </p>
 
+    </article>
 
-      <label
-        class="dropzone"
-        id="dropzone"
-        for="fileInput"
-      >
 
-        <input
-          type="file"
-          id="fileInput"
-          accept="image/*"
-        >
 
+    <article class="story-card">
 
-        <div class="upload-icon">
-          📸
-        </div>
+      <h2>
+        Build<br>
+        slowly.
+      </h2>
 
+      <p>
 
-        <h3>
-          Drop your photo here
-        </h3>
+        A digital screen gives you an image in
+        seconds. Papercraft asks you to slow down.
 
+        Cut a line.
 
-        <p>
-          JPG, PNG or WEBP
-        </p>
+        Fold a tab.
 
+        Add a little glue.
 
-        <span class="upload-button">
-          CHOOSE PHOTO
-        </span>
+        Then suddenly something exists
+        because you made it.
 
-
-        <div
-          class="file-name"
-          id="fileName"
-        ></div>
-
-      </label>
-
-
-      <!-- STYLE OPTIONS -->
-
-      <div style="margin-top:30px;">
-
-        <div class="card-label">
-          STEP 02 · CHOOSE STYLE
-        </div>
-
-
-        <div class="options">
-
-          <button
-            class="option active"
-            type="button"
-            onclick="selectStyle(this)"
-          >
-
-            <div class="option-icon">
-              🧸
-            </div>
-
-            <strong>
-              Cute
-            </strong>
-
-            <small>
-              Soft & playful
-            </small>
-
-          </button>
-
-
-          <button
-            class="option"
-            type="button"
-            onclick="selectStyle(this)"
-          >
-
-            <div class="option-icon">
-              🧊
-            </div>
-
-            <strong>
-              Minimal
-            </strong>
-
-            <small>
-              Clean & simple
-            </small>
-
-          </button>
-
-
-          <button
-            class="option"
-            type="button"
-            onclick="selectStyle(this)"
-          >
-
-            <div class="option-icon">
-              🎭
-            </div>
-
-            <strong>
-              Character
-            </strong>
-
-            <small>
-              More detailed
-            </small>
-
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- PREVIEW -->
-
-    <div class="preview-card">
-
-      <div class="preview-top">
-
-        <span>
-          YOUR PAPERCRAFT
-        </span>
-
-        <div class="preview-status">
-          PREVIEW
-        </div>
-
-      </div>
-
-
-      <div class="preview-world">
-
-        <div class="paper-sheet">
-
-          <div class="paper-fold"></div>
-
-
-          <div
-            class="placeholder-art"
-            id="placeholderArt"
-          >
-
-            <div class="person">
-              👤
-            </div>
-
-            <p>
-              YOUR PHOTO<br>
-              WILL APPEAR HERE
-            </p>
-
-          </div>
-
-
-          <img
-            id="photoPreview"
-            alt="Your uploaded photo preview"
-          >
-
-
-          <div class="preview-caption">
-            FINAL DESIGN WILL BE PREPARED FOR PRINT
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div style="position:relative;z-index:2;">
-
-        <div
-          style="
-            color:#aaa;
-            font-size:12px;
-            line-height:1.5;
-          "
-        >
-
-          We'll prepare your custom design,
-          print it on A5 paper and send it
-          to your delivery address.
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ===================================================
-  PRICING
-  ==================================================== -->
-
-  <section class="pricing">
-
-
-    <!-- BASIC -->
-
-    <article class="plan">
-
-      <div class="plan-label">
-        DIGITAL
-      </div>
-
-      <h3>
-        Custom Design
-      </h3>
-
-      <div class="plan-price">
-        ₹99
-        <span>
-          / design
-        </span>
-      </div>
-
-      <ul>
-
-        <li>
-          Custom papercraft design
-        </li>
-
-        <li>
-          High-resolution file
-        </li>
-
-        <li>
-          Ready for printing
-        </li>
-
-      </ul>
-
-      <a
-        href="#"
-        class="plan-button"
-        onclick="choosePlan('Custom Design',99);return false;"
-      >
-        CHOOSE ₹99
-      </a>
+      </p>
 
     </article>
 
 
 
-    <!-- PHYSICAL -->
+    <article class="story-card">
 
-    <article class="plan featured">
+      <h2>
+        Keep<br>
+        it.
+      </h2>
 
-      <div class="popular">
-        POPULAR
-      </div>
+      <p>
 
-      <div class="plan-label">
-        PHYSICAL
-      </div>
+        Our goal isn't just to sell a printed sheet.
 
-      <h3>
-        Printed A5
-      </h3>
+        We want the finished object to sit on a
+        desk, shelf or bedside table and remind
+        you that you made it yourself.
 
-      <div class="plan-price">
-        ₹199
-        <span>
-          + shipping
-        </span>
-      </div>
-
-      <ul>
-
-        <li>
-          Custom design
-        </li>
-
-        <li>
-          Printed on A5 paper
-        </li>
-
-        <li>
-          Carefully packed
-        </li>
-
-        <li>
-          Delivered to you
-        </li>
-
-      </ul>
-
-      <a
-        href="#"
-        class="plan-button"
-        onclick="choosePlan('Printed A5',199);return false;"
-      >
-        CHOOSE ₹199
-      </a>
+      </p>
 
     </article>
 
 
 
-    <!-- GIFT -->
+    <article class="story-card">
 
-    <article class="plan">
+      <h2>
+        Make it<br>
+        yours.
+      </h2>
 
-      <div class="plan-label">
-        GIFT
-      </div>
+      <p>
 
-      <h3>
-        Custom Gift
-      </h3>
+        Beyond our collection, we're building
+        custom papercrafts where your photos,
+        characters, memories and ideas can become
+        physical paper objects.
 
-      <div class="plan-price">
-        ₹299
-        <span>
-          + shipping
-        </span>
-      </div>
-
-      <ul>
-
-        <li>
-          Premium custom design
-        </li>
-
-        <li>
-          Printed A5 sheet
-        </li>
-
-        <li>
-          Gift-ready packaging
-        </li>
-
-        <li>
-          Perfect for occasions
-        </li>
-
-      </ul>
-
-      <a
-        href="#"
-        class="plan-button"
-        onclick="choosePlan('Custom Gift',299);return false;"
-      >
-        CHOOSE ₹299
-      </a>
+      </p>
 
     </article>
 
 
-  </section>
+  </div>
+
+</section>
 
 
 
-  <!-- ===================================================
-  INFO
-  ==================================================== -->
+<!-- =====================================================
+MISSION
+===================================================== -->
 
-  <section class="info-strip">
+<section class="mission">
 
-    <div class="info-item">
+  <div class="mission-box">
+
+    <div class="mission-content">
+
+      <div class="mission-label">
+        OUR MISSION
+      </div>
+
+
+      <h2>
+
+        TURN ORDINARY<br>
+        PAPER INTO<br>
+        EXTRAORDINARY THINGS.
+
+      </h2>
+
+
+      <p>
+
+        1rs.shop exists to make creativity physical.
+
+        We design papercrafts that are simple enough
+        to build, interesting enough to display and
+        affordable enough to experiment with.
+
+        The sheet arrives flat.
+
+        The imagination does the rest.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+VALUES
+===================================================== -->
+
+<section class="values">
+
+
+  <div class="values-heading">
+
+    <h2>
+      What we care about.
+    </h2>
+
+  </div>
+
+
+  <div class="values-grid">
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        ₹
+      </div>
+
+      <h3>
+        Accessible creativity
+      </h3>
+
+      <p>
+
+        Creative hobbies shouldn't always require
+        expensive materials. We want the first step
+        to feel almost effortless.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        ✂️
+      </div>
+
+      <h3>
+        Hands-on making
+      </h3>
+
+      <p>
+
+        We make things that ask you to interact
+        with them instead of simply looking at
+        another screen.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        ♻️
+      </div>
+
+      <h3>
+        Less material
+      </h3>
+
+      <p>
+
+        Small, flat designs can create surprisingly
+        interesting objects without requiring large
+        amounts of material.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        ❤️
+      </div>
+
+      <h3>
+        Personal meaning
+      </h3>
+
+      <p>
+
+        The best papercraft isn't necessarily the
+        most complicated one. It's the one that
+        means something to the person who built it.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        🌎
+      </div>
+
+      <h3>
+        Made to travel
+      </h3>
+
+      <p>
+
+        Flat paper is lightweight and compact,
+        making our creations easy to package
+        and send around the world.
+
+      </p>
+
+    </article>
+
+
+
+    <article class="value">
+
+      <div class="value-icon">
+        🚀
+      </div>
+
+      <h3>
+        Keep experimenting
+      </h3>
+
+      <p>
+
+        New designs, custom creations and strange
+        little paper ideas are all part of the journey.
+
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+NUMBERS
+===================================================== -->
+
+<section class="numbers">
+
+  <div class="number-grid">
+
+
+    <div class="number">
 
       <strong>
-        📄 A5 PRINT
+        ₹1
       </strong>
 
       <span>
-        Printed for assembly
+        STARTING PRICE
       </span>
 
     </div>
 
 
-    <div class="info-item">
+    <div class="number">
 
       <strong>
-        ✂️ DIY
+        A5
       </strong>
 
       <span>
-        Cut, fold & build
+        PAPER FORMAT
       </span>
 
     </div>
 
 
-    <div class="info-item">
+    <div class="number">
 
       <strong>
-        📦 PACKED
+        1
       </strong>
 
       <span>
-        Protected for shipping
+        SHEET CAN BECOME A WORLD
       </span>
 
     </div>
 
 
-    <div class="info-item">
+    <div class="number">
 
       <strong>
-        ❤️ CUSTOM
+        ∞
       </strong>
 
       <span>
-        Made from your photo
+        THINGS YOU CAN BUILD
       </span>
 
     </div>
 
-  </section>
 
-</main>
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+CTA
+===================================================== -->
+
+<section class="about-cta">
+
+  <div class="cta-box">
+
+
+    <div>
+
+      <h2>
+
+        Ready to<br>
+        build one?
+
+      </h2>
+
+
+      <p>
+
+        Pick a papercraft and start with just ₹1.
+
+      </p>
+
+    </div>
+
+
+    <a
+      href="products.html"
+      class="cta-button"
+    >
+
+      EXPLORE PAPERCRAFTS →
+
+    </a>
+
+
+  </div>
+
+</section>
 
 
 
@@ -1573,224 +1417,41 @@ PAGE
 FOOTER
 ===================================================== -->
 
-<footer>
+<footer class="site-footer">
 
   <div class="footer">
 
     <div>
 
       <div class="footer-logo">
+
         1rs<span>.</span>shop
+
       </div>
+
 
       <div
         class="footer-text"
         style="margin-top:8px;"
       >
+
         Small price. Big imagination.
+
       </div>
 
     </div>
 
 
     <div class="footer-text">
+
       © 2026 1rs.shop
+
     </div>
 
   </div>
 
 </footer>
 
-
-
-<!-- =====================================================
-JAVASCRIPT
-===================================================== -->
-
-<script>
-
-const fileInput =
-  document.getElementById("fileInput");
-
-const dropzone =
-  document.getElementById("dropzone");
-
-const photoPreview =
-  document.getElementById("photoPreview");
-
-const placeholderArt =
-  document.getElementById("placeholderArt");
-
-const fileName =
-  document.getElementById("fileName");
-
-
-/* =====================================================
-FILE HANDLING
-===================================================== */
-
-function handleFile(file){
-
-  if(!file){
-    return;
-  }
-
-  if(!file.type.startsWith("image/")){
-
-    alert(
-      "Please choose an image file."
-    );
-
-    return;
-  }
-
-
-  fileName.textContent =
-    file.name;
-
-
-  const reader =
-    new FileReader();
-
-
-  reader.onload = function(event){
-
-    photoPreview.src =
-      event.target.result;
-
-    photoPreview.style.display =
-      "block";
-
-    placeholderArt.style.display =
-      "none";
-
-  };
-
-
-  reader.readAsDataURL(file);
-
-}
-
-
-fileInput.addEventListener(
-  "change",
-  function(){
-
-    handleFile(
-      this.files[0]
-    );
-
-  }
-);
-
-
-/* =====================================================
-DRAG AND DROP
-===================================================== */
-
-dropzone.addEventListener(
-  "dragover",
-  function(event){
-
-    event.preventDefault();
-
-    dropzone.classList.add(
-      "dragover"
-    );
-
-  }
-);
-
-
-dropzone.addEventListener(
-  "dragleave",
-  function(){
-
-    dropzone.classList.remove(
-      "dragover"
-    );
-
-  }
-);
-
-
-dropzone.addEventListener(
-  "drop",
-  function(event){
-
-    event.preventDefault();
-
-    dropzone.classList.remove(
-      "dragover"
-    );
-
-    const file =
-      event.dataTransfer.files[0];
-
-    handleFile(file);
-
-  }
-);
-
-
-/* =====================================================
-STYLE SELECTOR
-===================================================== */
-
-function selectStyle(button){
-
-  document
-    .querySelectorAll(".option")
-    .forEach(
-      option =>
-        option.classList.remove("active")
-    );
-
-  button.classList.add("active");
-
-}
-
-
-/* =====================================================
-PLAN SELECTION
-===================================================== */
-
-function choosePlan(
-  planName,
-  price
-){
-
-  const hasPhoto =
-    fileInput.files.length > 0;
-
-
-  if(!hasPhoto){
-
-    alert(
-      "Please upload your photo first."
-    );
-
-    dropzone.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-
-    return;
-
-  }
-
-
-  alert(
-    planName +
-    " selected — ₹" +
-    price +
-    ".\n\n" +
-    "Next step: checkout and delivery details."
-  );
-
-}
-
-</script>
 
 </body>
 </html>
