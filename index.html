@@ -1,16 +1,1606 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Home</title><link rel='stylesheet' href='assets/style.css'></head><body>
-<header><div class='container'><h1>Green Harvest Hub</h1><nav>
-<a href='index.html'>Home</a><a href='products.html'>Products</a><a href='guides.html'>Guides</a><a href='about.html'>About</a><a href='contact.html'>Contact</a>
-</nav></div></header>
-<div class='container'>
-<h2>Grow Better, Harvest Smarter</h2>
-<p>Green Harvest Hub publishes original educational content about farming equipment, irrigation, greenhouse systems, hydroponics, and gardening.</p>
-<div class='grid'>
-<div class='card'><h3>Buying Guides</h3><p>Learn how to choose the right equipment.</p><a class='btn' href='guides.html'>Read Guides</a></div>
-<div class='card'><h3>Product Categories</h3><p>Explore common agriculture product types.</p><a class='btn' href='products.html'>Browse</a></div>
-<div class='card'><h3>Beginner Tips</h3><p>Understand soil, irrigation and crop care.</p></div>
-</div>
-</div>
-<footer><div class='container'><p>Affiliate Disclosure: Some pages may contain affiliate links. We only recommend products after independent research.</p></div></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>1rs.shop | Papercraft for ₹1</title>
+  <meta
+    name="description"
+    content="Discover beautiful papercrafts starting at just ₹1. Choose, print, fold and create your own little paper world."
+  />
+
+  <style>
+    /* =========================================================
+       1RS.SHOP
+       PAPER WORLD DESIGN SYSTEM
+    ========================================================= */
+
+    :root {
+      --paper: #f7f2e8;
+      --paper-light: #fffdf8;
+      --ink: #171717;
+      --muted: #77736b;
+      --line: rgba(23, 23, 23, 0.1);
+      --accent: #ff5c35;
+      --accent-dark: #d93d1b;
+      --green: #6e9f68;
+      --yellow: #f2c94c;
+      --shadow: rgba(42, 35, 25, 0.14);
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.9), transparent 28%),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,.6), transparent 30%),
+        var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(calc(100% - 32px), 1180px);
+      z-index: 1000;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 12px 14px 12px 20px;
+
+      background: rgba(255, 253, 248, 0.82);
+      backdrop-filter: blur(18px);
+
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 22px;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.08),
+        inset 0 1px rgba(255,255,255,.8);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -1.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      opacity: .7;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-button {
+      padding: 11px 18px;
+      background: var(--ink);
+      color: white;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      min-height: 900px;
+      max-width: var(--max);
+      margin: auto;
+
+      padding: 155px 28px 80px;
+
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 8px 13px;
+
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+
+      box-shadow: 0 6px 20px rgba(0,0,0,.05);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      margin-top: 25px;
+
+      font-size: clamp(62px, 8vw, 112px);
+      line-height: .83;
+      letter-spacing: -7px;
+      font-weight: 950;
+    }
+
+    .hero h1 .orange {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      max-width: 500px;
+      margin-top: 30px;
+
+      color: #666159;
+
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button {
+      position: relative;
+
+      padding: 16px 23px;
+
+      border: 0;
+      border-radius: 16px;
+
+      background: var(--accent);
+      color: white;
+
+      font-weight: 900;
+      font-size: 14px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 7px 0 var(--accent-dark),
+        0 15px 25px rgba(255,92,53,.25);
+
+      transition: .15s;
+    }
+
+    .primary-button:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 9px 0 var(--accent-dark),
+        0 18px 30px rgba(255,92,53,.28);
+    }
+
+    .primary-button:active {
+      transform: translateY(5px);
+      box-shadow:
+        0 2px 0 var(--accent-dark),
+        0 8px 15px rgba(255,92,53,.2);
+    }
+
+    .secondary-button {
+      padding: 16px 23px;
+
+      border: 1px solid var(--line);
+      border-radius: 16px;
+
+      background: white;
+
+      font-weight: 900;
+      font-size: 14px;
+
+      cursor: pointer;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,.05);
+    }
+
+    /* =========================================================
+       3D PAPER WORLD
+    ========================================================= */
+
+    .paper-stage {
+      position: relative;
+      height: 570px;
+
+      perspective: 1200px;
+    }
+
+    .paper-world {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      width: 480px;
+      height: 480px;
+
+      transform:
+        translate(-50%, -50%)
+        rotateX(58deg)
+        rotateZ(-8deg);
+
+      transform-style: preserve-3d;
+
+      transition: transform .6s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .paper-stage:hover .paper-world {
+      transform:
+        translate(-50%, -50%)
+        rotateX(55deg)
+        rotateZ(-3deg)
+        rotateY(-5deg);
+    }
+
+    .paper-ground {
+      position: absolute;
+
+      width: 480px;
+      height: 480px;
+
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.9), transparent),
+        #e9dfcd;
+
+      border: 1px solid rgba(0,0,0,.08);
+
+      transform: translateZ(0);
+
+      box-shadow:
+        25px 35px 45px rgba(55,42,25,.18),
+        inset 0 0 60px rgba(0,0,0,.04);
+    }
+
+    .ground-line {
+      position: absolute;
+      width: 420px;
+      height: 1px;
+      background: rgba(0,0,0,.1);
+      left: 30px;
+      top: 240px;
+    }
+
+    /* HOUSE */
+
+    .house {
+      position: absolute;
+
+      width: 190px;
+      height: 150px;
+
+      left: 145px;
+      top: 145px;
+
+      transform-style: preserve-3d;
+      transform: translateZ(45px);
+    }
+
+    .house-front {
+      position: absolute;
+
+      width: 190px;
+      height: 150px;
+
+      background: #fff9ed;
+
+      border: 2px solid #333;
+
+      transform: translateZ(65px);
+    }
+
+    .house-side {
+      position: absolute;
+
+      width: 130px;
+      height: 150px;
+
+      right: -130px;
+
+      background: #eadfc9;
+
+      border: 2px solid #333;
+
+      transform-origin: left;
+      transform: rotateY(90deg);
+    }
+
+    .house-roof-left,
+    .house-roof-right {
+      position: absolute;
+
+      width: 150px;
+      height: 135px;
+
+      top: -67px;
+
+      background: #e86c4c;
+
+      border: 2px solid #333;
+    }
+
+    .house-roof-left {
+      left: -5px;
+      transform-origin: bottom right;
+      transform: rotateY(-38deg) rotateX(25deg);
+    }
+
+    .house-roof-right {
+      right: -5px;
+      transform-origin: bottom left;
+      transform: rotateY(38deg) rotateX(25deg);
+    }
+
+    .door {
+      position: absolute;
+
+      width: 43px;
+      height: 72px;
+
+      left: 70px;
+      bottom: 0;
+
+      background: #6d5846;
+
+      border: 2px solid #333;
+    }
+
+    .door-knob {
+      position: absolute;
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: #f2c94c;
+
+      right: 6px;
+      top: 37px;
+    }
+
+    .window {
+      position: absolute;
+
+      width: 45px;
+      height: 45px;
+
+      top: 37px;
+
+      background: #b8dbe2;
+
+      border: 2px solid #333;
+    }
+
+    .window.one {
+      left: 18px;
+    }
+
+    .window.two {
+      right: 18px;
+    }
+
+    .window::after {
+      content: "";
+      position: absolute;
+
+      left: 50%;
+      top: 0;
+
+      height: 100%;
+      width: 2px;
+
+      background: #333;
+    }
+
+    .window::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: 50%;
+
+      width: 100%;
+      height: 2px;
+
+      background: #333;
+    }
+
+    /* TREE */
+
+    .tree {
+      position: absolute;
+
+      left: 65px;
+      top: 125px;
+
+      transform: translateZ(32px);
+
+      transform-style: preserve-3d;
+    }
+
+    .trunk {
+      width: 24px;
+      height: 95px;
+
+      background: #8a674d;
+
+      border: 2px solid #333;
+
+      margin-left: 35px;
+    }
+
+    .leaf {
+      position: absolute;
+
+      width: 85px;
+      height: 85px;
+
+      background: #7fa86e;
+
+      border: 2px solid #333;
+
+      border-radius: 50% 45% 50% 40%;
+
+      top: -45px;
+      left: 5px;
+    }
+
+    .leaf.two {
+      top: -65px;
+      left: 45px;
+      width: 75px;
+      height: 75px;
+      background: #94b77e;
+    }
+
+    /* PAPER CUTOUT STARS */
+
+    .star {
+      position: absolute;
+
+      width: 45px;
+      height: 45px;
+
+      background: #f2c94c;
+
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        100% 35%,
+        69% 57%,
+        80% 100%,
+        50% 73%,
+        20% 100%,
+        31% 57%,
+        0% 35%,
+        39% 35%
+      );
+
+      transform: translateZ(70px);
+    }
+
+    .star.one {
+      right: 50px;
+      top: 90px;
+    }
+
+    .star.two {
+      left: 80px;
+      bottom: 75px;
+      width: 28px;
+      height: 28px;
+    }
+
+    /* PRICE TAG */
+
+    .price-tag {
+      position: absolute;
+
+      right: -5px;
+      bottom: 50px;
+
+      width: 135px;
+      height: 135px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background: var(--accent);
+      color: white;
+
+      border-radius: 50%;
+
+      border: 5px solid white;
+
+      box-shadow:
+        15px 20px 35px rgba(0,0,0,.18);
+
+      transform: translateZ(120px) rotate(8deg);
+    }
+
+    .price-tag strong {
+      font-size: 47px;
+      line-height: .9;
+      letter-spacing: -3px;
+    }
+
+    .price-tag span {
+      font-size: 12px;
+      font-weight: 900;
+      margin-top: 7px;
+    }
+
+    /* SCISSORS */
+
+    .scissors {
+      position: absolute;
+
+      left: 10px;
+      bottom: 20px;
+
+      font-size: 75px;
+
+      transform:
+        translateZ(95px)
+        rotate(-25deg);
+
+      filter: drop-shadow(10px 15px 10px rgba(0,0,0,.16));
+    }
+
+    /* =========================================================
+       PAPER STRIP
+    ========================================================= */
+
+    .paper-strip {
+      width: 100%;
+      overflow: hidden;
+
+      background: #191919;
+      color: white;
+
+      padding: 16px 0;
+
+      transform: rotate(-1.5deg) scale(1.02);
+
+      margin-top: -25px;
+    }
+
+    .strip-inner {
+      display: flex;
+      width: max-content;
+
+      animation: marquee 22s linear infinite;
+    }
+
+    .strip-inner span {
+      margin: 0 30px;
+
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
+
+    section.content {
+      max-width: var(--max);
+      margin: auto;
+      padding: 120px 28px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      max-width: 650px;
+
+      font-size: clamp(40px, 5vw, 70px);
+      line-height: .95;
+      letter-spacing: -4px;
+    }
+
+    .section-heading p {
+      max-width: 340px;
+
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       PRODUCT CARDS
+    ========================================================= */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product {
+      position: relative;
+
+      min-height: 360px;
+
+      padding: 16px;
+
+      background: #fffdf8;
+
+      border: 1px solid var(--line);
+
+      box-shadow:
+        8px 12px 0 rgba(0,0,0,.035),
+        0 15px 30px rgba(0,0,0,.06);
+
+      transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s;
+    }
+
+    .product:hover {
+      transform: translateY(-10px) rotate(-1deg);
+      box-shadow:
+        15px 22px 0 rgba(0,0,0,.04),
+        0 25px 45px rgba(0,0,0,.1);
+    }
+
+    .product-art {
+      height: 235px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(circle at 30% 20%, white, transparent 40%),
+        #eee5d5;
+
+      overflow: hidden;
+    }
+
+    .mini-paper {
+      width: 135px;
+      height: 135px;
+
+      background: white;
+
+      border: 2px solid #222;
+
+      box-shadow: 15px 18px 0 rgba(0,0,0,.08);
+
+      transform:
+        rotate(-7deg)
+        skewY(-4deg);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 65px;
+    }
+
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-top: 17px;
+    }
+
+    .product-name {
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .product-price {
+      padding: 7px 10px;
+
+      background: #171717;
+      color: white;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    /* =========================================================
+       HOW IT WORKS
+    ========================================================= */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .step {
+      min-height: 220px;
+
+      padding: 25px;
+
+      background: white;
+
+      border: 1px solid var(--line);
+
+      box-shadow: 8px 10px 0 rgba(0,0,0,.035);
+
+      position: relative;
+    }
+
+    .step-number {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .step-icon {
+      font-size: 45px;
+      margin: 30px 0 18px;
+    }
+
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    /* =========================================================
+       CUSTOM PAPerCRAFT
+    ========================================================= */
+
+    .custom {
+      position: relative;
+
+      max-width: 1180px;
+      margin: 70px auto 120px;
+
+      padding: 80px;
+
+      overflow: hidden;
+
+      background: #171717;
+      color: white;
+
+      border-radius: 35px;
+
+      box-shadow: 0 30px 70px rgba(0,0,0,.18);
+    }
+
+    .custom::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      right: -180px;
+      top: -180px;
+
+      background: var(--accent);
+
+      clip-path: polygon(
+        50% 0,
+        100% 0,
+        100% 100%,
+        0 50%
+      );
+
+      opacity: .9;
+    }
+
+    .custom-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 650px;
+    }
+
+    .custom small {
+      color: #ff9a82;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .custom h2 {
+      margin-top: 18px;
+
+      font-size: clamp(45px, 6vw, 80px);
+      line-height: .9;
+      letter-spacing: -5px;
+    }
+
+    .custom p {
+      margin-top: 25px;
+
+      max-width: 550px;
+
+      color: #bcb9b2;
+
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .custom-button {
+      display: inline-block;
+
+      margin-top: 30px;
+
+      padding: 16px 22px;
+
+      background: white;
+      color: #171717;
+
+      border-radius: 15px;
+
+      font-weight: 900;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 60px 28px 35px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .footer-logo {
+      font-size: 25px;
+      font-weight: 950;
+      letter-spacing: -2px;
+    }
+
+    .footer-logo span {
+      color: var(--accent);
+    }
+
+    .footer-text {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1000px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .paper-stage {
+        height: 500px;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav {
+        top: 10px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 120px 18px 50px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: 65px;
+        letter-spacing: -4px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .paper-stage {
+        height: 420px;
+        transform: scale(.72);
+        transform-origin: center;
+        margin: -40px 0;
+      }
+
+      section.content {
+        padding: 80px 18px;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 20px;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .product {
+        min-height: 285px;
+      }
+
+      .product-art {
+        height: 175px;
+      }
+
+      .mini-paper {
+        width: 100px;
+        height: 100px;
+        font-size: 45px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .custom {
+        margin: 30px 15px 80px;
+        padding: 50px 25px;
+        border-radius: 25px;
+      }
+
+      .custom h2 {
+        letter-spacing: -3px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav class="nav">
+
+    <a href="index.html" class="logo">
+      1rs<span>.</span>shop
+    </a>
+
+    <div class="nav-links">
+      <a href="products.html">Papercrafts</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="products.html" class="nav-button">
+      Explore ₹1
+    </a>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          A tiny price. A whole paper world.
+        </div>
+
+        <h1>
+          PAPER<br>
+          <span class="orange">FOR ₹1.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Discover fun papercrafts printed on A5 paper and
+          delivered to your door. Cut it. Fold it. Build it.
+          Make something real.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="products.html" class="primary-button">
+            GET A PAPERCRAFT FOR ₹1
+          </a>
+
+          <a href="#custom" class="secondary-button">
+            Make it Custom
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           3D PAPER WORLD
+      ==================================================== -->
+
+      <div class="paper-stage">
+
+        <div class="paper-world">
+
+          <div class="paper-ground">
+            <div class="ground-line"></div>
+          </div>
+
+          <!-- HOUSE -->
+
+          <div class="house">
+
+            <div class="house-front">
+
+              <div class="window one"></div>
+              <div class="window two"></div>
+
+              <div class="door">
+                <div class="door-knob"></div>
+              </div>
+
+            </div>
+
+            <div class="house-side"></div>
+
+            <div class="house-roof-left"></div>
+            <div class="house-roof-right"></div>
+
+          </div>
+
+
+          <!-- TREE -->
+
+          <div class="tree">
+
+            <div class="leaf"></div>
+            <div class="leaf two"></div>
+
+            <div class="trunk"></div>
+
+          </div>
+
+
+          <!-- STARS -->
+
+          <div class="star one"></div>
+          <div class="star two"></div>
+
+
+          <!-- PRICE -->
+
+          <div class="price-tag">
+
+            <strong>₹1</strong>
+            <span>START CREATING</span>
+
+          </div>
+
+
+          <!-- SCISSORS -->
+
+          <div class="scissors">
+            ✂
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MOVING PAPER STRIP
+    ====================================================== -->
+
+    <div class="paper-strip">
+
+      <div class="strip-inner">
+
+        <span>✂ CUT</span>
+        <span>↗ FOLD</span>
+        <span>♥ CREATE</span>
+        <span>₹1 PAPERCRAFTS</span>
+        <span>📦 DELIVERED</span>
+
+        <span>✂ CUT</span>
+        <span>↗ FOLD</span>
+        <span>♥ CREATE</span>
+        <span>₹1 PAPERCRAFTS</span>
+        <span>📦 DELIVERED</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PRODUCTS
+    ====================================================== -->
+
+    <section class="content">
+
+      <div class="section-heading">
+
+        <h2>
+          Pick your<br>
+          little world.
+        </h2>
+
+        <p>
+          Start with a tiny papercraft. We print it on A5 paper
+          and send it to you. Your job is simple:
+          cut, fold and create.
+        </p>
+
+      </div>
+
+
+      <div class="products">
+
+        <a href="products.html" class="product">
+
+          <div class="product-art">
+            <div class="mini-paper">🏠</div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-name">
+              Mini House
+            </div>
+
+            <div class="product-price">
+              ₹1
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <a href="products.html" class="product">
+
+          <div class="product-art">
+            <div class="mini-paper">🚗</div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-name">
+              Tiny Car
+            </div>
+
+            <div class="product-price">
+              ₹1
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <a href="products.html" class="product">
+
+          <div class="product-art">
+            <div class="mini-paper">🐼</div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-name">
+              Paper Panda
+            </div>
+
+            <div class="product-price">
+              ₹1
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <a href="products.html" class="product">
+
+          <div class="product-art">
+            <div class="mini-paper">🚀</div>
+          </div>
+
+          <div class="product-info">
+
+            <div class="product-name">
+              Space Rocket
+            </div>
+
+            <div class="product-price">
+              ₹1
+            </div>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
+
+    <section class="content">
+
+      <div class="section-heading">
+
+        <h2>
+          From flat<br>
+          to fantastic.
+        </h2>
+
+        <p>
+          No complicated kits. No giant boxes.
+          Just a printed sheet and your imagination.
+        </p>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">
+            01
+          </div>
+
+          <div class="step-icon">
+            👆
+          </div>
+
+          <h3>
+            Choose
+          </h3>
+
+          <p>
+            Pick your favourite papercraft from our collection.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            02
+          </div>
+
+          <div class="step-icon">
+            🖨️
+          </div>
+
+          <h3>
+            We print
+          </h3>
+
+          <p>
+            Your design is printed beautifully on A5 paper.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            03
+          </div>
+
+          <div class="step-icon">
+            📦
+          </div>
+
+          <h3>
+            We ship
+          </h3>
+
+          <p>
+            Your flat little world is carefully packed and sent.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-number">
+            04
+          </div>
+
+          <div class="step-icon">
+            ✂️
+          </div>
+
+          <h3>
+            You create
+          </h3>
+
+          <p>
+            Cut, fold and turn one sheet into something real.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CUSTOM PAPerCRAFT
+    ====================================================== -->
+
+    <section id="custom" class="custom">
+
+      <div class="custom-content">
+
+        <small>
+          WANT SOMETHING PERSONAL?
+        </small>
+
+        <h2>
+          Turn your photo<br>
+          into paper.
+        </h2>
+
+        <p>
+          Upload a photo and create a custom papercraft
+          made especially for you. Perfect for gifts,
+          couples, pets, characters and memories.
+        </p>
+
+        <a href="custom.html" class="custom-button">
+          CREATE MY CUSTOM PAPERCRAFT →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+
+    <section class="content" style="text-align:center;">
+
+      <div class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        Your next creation is one sheet away.
+      </div>
+
+      <h2 style="
+        font-size:clamp(45px,7vw,90px);
+        line-height:.9;
+        letter-spacing:-5px;
+        margin-top:25px;
+      ">
+        WHY NOT<br>
+        <span style="color:var(--accent);">₹1?</span>
+      </h2>
+
+      <p style="
+        max-width:520px;
+        margin:25px auto 30px;
+        color:var(--muted);
+        line-height:1.6;
+      ">
+        Pick a design. We'll print it.
+        You bring it to life.
+      </p>
+
+      <a href="products.html" class="primary-button">
+        EXPLORE PAPERCRAFTS
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <div class="footer-logo">
+          1rs<span>.</span>shop
+        </div>
+
+        <div class="footer-text" style="margin-top:8px;">
+          Small price. Big imagination.
+        </div>
+
+      </div>
+
+      <div class="footer-text">
+        © 2026 1rs.shop. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       SMALL INTERACTION
+  ======================================================== -->
+
+  <script>
+
+    // Slight mouse movement for the 3D paper world
+
+    const stage = document.querySelector(".paper-stage");
+    const world = document.querySelector(".paper-world");
+
+    if (stage && world) {
+
+      stage.addEventListener("mousemove", (event) => {
+
+        const rect = stage.getBoundingClientRect();
+
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+        world.style.transform = `
+          translate(-50%, -50%)
+          rotateX(${58 - y * 8}deg)
+          rotateZ(${-8 + x * 7}deg)
+          rotateY(${x * -6}deg)
+        `;
+
+      });
+
+      stage.addEventListener("mouseleave", () => {
+
+        world.style.transform = `
+          translate(-50%, -50%)
+          rotateX(58deg)
+          rotateZ(-8deg)
+        `;
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
