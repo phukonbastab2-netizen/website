@@ -1,18 +1,1664 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
-<title>Guides</title><link rel='stylesheet' href='assets/style.css'></head><body>
-<header><div class='container'><h1>Green Harvest Hub</h1><nav>
-<a href='index.html'>Home</a><a href='products.html'>Products</a><a href='guides.html'>Guides</a><a href='about.html'>About</a><a href='contact.html'>Contact</a>
-</nav></div></header>
-<div class='container'>
-<h2>Guides</h2>
-<ul>
-<li>How to Choose a Grow Light</li>
-<li>Hydroponics for Beginners</li>
-<li>Planning a Small Greenhouse</li>
-<li>Understanding Irrigation Systems</li>
-<li>Seed Starting Basics</li>
-</ul>
-<p>Expand each topic into detailed original articles before publishing.</p>
-</div>
-<footer><div class='container'><p>Affiliate Disclosure: Some pages may contain affiliate links. We only recommend products after independent research.</p></div></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How to Build | 1rs.shop</title>
+
+<meta
+  name="description"
+  content="Learn how to cut, fold and build your 1rs.shop papercrafts."
+>
+
+<style>
+
+:root{
+  --paper:#f6f1e7;
+  --white:#fffdf8;
+  --ink:#171717;
+  --muted:#777269;
+  --orange:#ff5c35;
+  --orange-dark:#d94120;
+  --yellow:#f2c94c;
+  --green:#7da26c;
+  --line:rgba(20,20,20,.1);
+  --max:1240px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(circle at 15% 10%,rgba(255,255,255,.9),transparent 28%),
+    radial-gradient(circle at 90% 30%,rgba(255,255,255,.6),transparent 30%),
+    var(--paper);
+
+  color:var(--ink);
+
+  font-family:Arial,Helvetica,sans-serif;
+
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+
+/* =========================================================
+NAVIGATION
+========================================================= */
+
+.nav{
+
+  position:fixed;
+
+  top:18px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:min(calc(100% - 32px),1180px);
+
+  z-index:1000;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:space-between;
+
+  padding:12px 14px 12px 20px;
+
+  background:rgba(255,253,248,.85);
+
+  backdrop-filter:blur(18px);
+
+  border:1px solid var(--line);
+
+  border-radius:22px;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.08),
+    inset 0 1px rgba(255,255,255,.9);
+}
+
+.logo{
+
+  font-size:22px;
+
+  font-weight:950;
+
+  letter-spacing:-1.5px;
+}
+
+.logo span{
+  color:var(--orange);
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:28px;
+
+  align-items:center;
+
+  font-size:14px;
+
+  font-weight:700;
+}
+
+.nav-links a{
+  opacity:.65;
+}
+
+.nav-links a:hover{
+  opacity:1;
+}
+
+.nav-button{
+
+  background:var(--ink);
+
+  color:white;
+
+  padding:11px 17px;
+
+  border-radius:13px;
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  padding:
+    160px 28px 100px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:8px 14px;
+
+  background:white;
+
+  border:1px solid var(--line);
+
+  border-radius:100px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+
+.dot{
+
+  width:8px;
+  height:8px;
+
+  background:var(--orange);
+
+  border-radius:50%;
+}
+
+.hero h1{
+
+  margin-top:25px;
+
+  font-size:
+    clamp(55px,7vw,92px);
+
+  line-height:.85;
+
+  letter-spacing:-6px;
+
+  font-weight:950;
+}
+
+.hero h1 span{
+  color:var(--orange);
+}
+
+.hero p{
+
+  max-width:520px;
+
+  margin-top:28px;
+
+  color:var(--muted);
+
+  font-size:17px;
+
+  line-height:1.65;
+}
+
+.hero-button{
+
+  display:inline-block;
+
+  margin-top:30px;
+
+  padding:16px 22px;
+
+  background:var(--orange);
+
+  color:white;
+
+  border-radius:15px;
+
+  font-size:14px;
+
+  font-weight:900;
+
+  box-shadow:
+    0 6px 0 var(--orange-dark),
+    0 15px 25px rgba(255,92,53,.2);
+
+  transition:.2s;
+}
+
+.hero-button:hover{
+
+  transform:translateY(-3px);
+}
+
+
+/* =========================================================
+PAPER INSTRUCTION SHEET
+========================================================= */
+
+.paper-demo{
+
+  position:relative;
+
+  min-height:480px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  perspective:1000px;
+}
+
+.instruction-paper{
+
+  width:340px;
+
+  height:430px;
+
+  background:#fffdf7;
+
+  border:1px solid rgba(0,0,0,.12);
+
+  box-shadow:
+    20px 25px 0 rgba(0,0,0,.04),
+    25px 35px 45px rgba(0,0,0,.14);
+
+  transform:
+    rotate(5deg)
+    rotateX(5deg);
+
+  padding:35px;
+
+  position:relative;
+
+  transition:.5s;
+}
+
+.paper-demo:hover .instruction-paper{
+
+  transform:
+    rotate(0deg)
+    rotateX(0deg)
+    translateY(-8px);
+}
+
+.paper-fold{
+
+  position:absolute;
+
+  top:0;
+  right:0;
+
+  width:60px;
+  height:60px;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 49%,
+      #e8dfd1 50%
+    );
+
+  border-left:1px solid #333;
+  border-bottom:1px solid #333;
+}
+
+.sheet-title{
+
+  font-size:13px;
+
+  font-weight:950;
+
+  letter-spacing:1px;
+
+  color:var(--orange);
+}
+
+.sheet-line{
+
+  width:100%;
+  height:1px;
+
+  background:var(--line);
+
+  margin:15px 0 25px;
+}
+
+.fake-house{
+
+  width:170px;
+  height:130px;
+
+  background:#fff8e8;
+
+  border:3px solid #222;
+
+  position:relative;
+
+  margin:35px auto;
+}
+
+.fake-roof{
+
+  position:absolute;
+
+  left:10px;
+  top:-65px;
+
+  width:145px;
+  height:100px;
+
+  background:#e86c4c;
+
+  border:3px solid #222;
+
+  transform:
+    skewX(-35deg)
+    rotate(0deg);
+}
+
+.fake-door{
+
+  position:absolute;
+
+  bottom:0;
+  left:63px;
+
+  width:40px;
+  height:65px;
+
+  background:#725843;
+
+  border:2px solid #222;
+}
+
+.fake-window{
+
+  position:absolute;
+
+  top:35px;
+
+  width:38px;
+  height:38px;
+
+  background:#b8dbe2;
+
+  border:2px solid #222;
+}
+
+.fake-window.one{
+  left:18px;
+}
+
+.fake-window.two{
+  right:18px;
+}
+
+.cut-line{
+
+  position:absolute;
+
+  bottom:28px;
+  left:35px;
+  right:35px;
+
+  border-top:2px dashed var(--orange);
+
+  padding-top:10px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+.floating-scissors{
+
+  position:absolute;
+
+  right:5px;
+  bottom:30px;
+
+  font-size:70px;
+
+  transform:rotate(-20deg);
+
+  filter:
+    drop-shadow(
+      10px 15px 10px rgba(0,0,0,.15)
+    );
+}
+
+
+/* =========================================================
+WORKSHOP
+========================================================= */
+
+.section{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  padding:100px 28px;
+}
+
+.section-heading{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:end;
+
+  gap:30px;
+
+  margin-bottom:45px;
+}
+
+.section-heading h2{
+
+  font-size:
+    clamp(42px,5vw,68px);
+
+  line-height:.9;
+
+  letter-spacing:-4px;
+}
+
+.section-heading p{
+
+  max-width:360px;
+
+  color:var(--muted);
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+STEPS
+========================================================= */
+
+.steps{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:18px;
+}
+
+.step{
+
+  min-height:300px;
+
+  padding:25px;
+
+  background:white;
+
+  border:1px solid var(--line);
+
+  box-shadow:
+    8px 12px 0 rgba(0,0,0,.035),
+    0 15px 30px rgba(0,0,0,.05);
+
+  position:relative;
+
+  transition:.3s;
+}
+
+.step:hover{
+
+  transform:
+    translateY(-7px)
+    rotate(-1deg);
+}
+
+.step:nth-child(2){
+  transform:rotate(1deg);
+}
+
+.step:nth-child(2):hover{
+  transform:
+    translateY(-7px)
+    rotate(0deg);
+}
+
+.step-number{
+
+  color:var(--orange);
+
+  font-size:12px;
+
+  font-weight:950;
+}
+
+.step-icon{
+
+  height:120px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:65px;
+}
+
+.step h3{
+
+  font-size:21px;
+
+  margin-bottom:10px;
+}
+
+.step p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+SYMBOL GUIDE
+========================================================= */
+
+.symbols{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:18px;
+}
+
+.symbol{
+
+  padding:30px;
+
+  background:#fffdf8;
+
+  border:1px solid var(--line);
+
+  display:flex;
+
+  align-items:center;
+
+  gap:20px;
+
+  box-shadow:
+    6px 8px 0 rgba(0,0,0,.03);
+}
+
+.symbol-mark{
+
+  width:65px;
+  height:65px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+
+  background:#eee5d5;
+
+  font-size:30px;
+
+  border:1px solid var(--line);
+}
+
+.symbol h3{
+
+  font-size:16px;
+
+  margin-bottom:5px;
+}
+
+.symbol p{
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.4;
+}
+
+
+/* =========================================================
+TIPS
+========================================================= */
+
+.tips{
+
+  background:#171717;
+
+  color:white;
+
+  border-radius:32px;
+
+  padding:70px;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.tips::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  right:-160px;
+  top:-160px;
+
+  background:var(--orange);
+
+  clip-path:polygon(
+    50% 0,
+    100% 0,
+    100% 100%,
+    0 50%
+  );
+}
+
+.tips-content{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:700px;
+}
+
+.tips small{
+
+  color:#ff9a82;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+}
+
+.tips h2{
+
+  margin-top:18px;
+
+  font-size:
+    clamp(40px,5vw,65px);
+
+  line-height:.9;
+
+  letter-spacing:-4px;
+}
+
+.tip-list{
+
+  margin-top:30px;
+
+  display:grid;
+
+  gap:15px;
+}
+
+.tip{
+
+  display:flex;
+
+  gap:14px;
+
+  align-items:flex-start;
+}
+
+.tip-number{
+
+  width:30px;
+  height:30px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.12);
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  flex-shrink:0;
+}
+
+.tip p{
+
+  color:#bbb8b2;
+
+  line-height:1.5;
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+CUSTOM CTA
+========================================================= */
+
+.custom{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  padding:30px 28px 120px;
+}
+
+.custom-box{
+
+  background:#fffdf8;
+
+  border:1px solid var(--line);
+
+  padding:55px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:40px;
+
+  box-shadow:
+    10px 15px 0 rgba(0,0,0,.035),
+    0 20px 40px rgba(0,0,0,.06);
+}
+
+.custom-box h2{
+
+  font-size:
+    clamp(35px,4vw,55px);
+
+  line-height:.9;
+
+  letter-spacing:-3px;
+}
+
+.custom-box p{
+
+  margin-top:15px;
+
+  max-width:520px;
+
+  color:var(--muted);
+
+  line-height:1.5;
+}
+
+.custom-button{
+
+  flex-shrink:0;
+
+  padding:16px 22px;
+
+  background:var(--orange);
+
+  color:white;
+
+  border-radius:15px;
+
+  font-size:13px;
+
+  font-weight:900;
+
+  box-shadow:
+    0 5px 0 var(--orange-dark);
+}
+
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer{
+
+  border-top:1px solid var(--line);
+
+  padding:60px 28px 35px;
+}
+
+.footer{
+
+  max-width:var(--max);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+}
+
+.footer-logo{
+
+  font-size:25px;
+
+  font-weight:950;
+
+  letter-spacing:-2px;
+}
+
+.footer-logo span{
+  color:var(--orange);
+}
+
+.footer-text{
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .paper-demo{
+    min-height:420px;
+  }
+
+  .steps{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .symbols{
+
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .custom-box{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:650px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+
+    padding:
+      125px 18px 70px;
+  }
+
+  .hero h1{
+
+    letter-spacing:-4px;
+  }
+
+  .instruction-paper{
+
+    transform:
+      scale(.82)
+      rotate(5deg);
+  }
+
+  .section{
+
+    padding:
+      75px 18px;
+  }
+
+  .section-heading{
+
+    display:block;
+  }
+
+  .section-heading p{
+
+    margin-top:20px;
+  }
+
+  .steps{
+
+    grid-template-columns:1fr;
+  }
+
+  .symbols{
+
+    grid-template-columns:1fr;
+  }
+
+  .tips{
+
+    padding:45px 25px;
+
+    border-radius:25px;
+  }
+
+  .custom{
+
+    padding:
+      20px 15px 80px;
+  }
+
+  .custom-box{
+
+    padding:40px 25px;
+  }
+
+  .footer{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+NAVIGATION
+====================================================== -->
+
+<nav class="nav">
+
+  <a href="index.html" class="logo">
+    1rs<span>.</span>shop
+  </a>
+
+  <div class="nav-links">
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="products.html">
+      Papercrafts
+    </a>
+
+    <a href="guides.html">
+      Guides
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+  </div>
+
+  <a
+    href="products.html"
+    class="nav-button"
+  >
+    Get a Papercraft
+  </a>
+
+</nav>
+
+
+
+<!-- ======================================================
+HERO
+====================================================== -->
+
+<section class="hero">
+
+
+  <div>
+
+    <div class="badge">
+
+      <span class="dot"></span>
+
+      PAPERCRAFT WORKSHOP
+
+    </div>
+
+
+    <h1>
+
+      FLAT PAPER.<br>
+
+      <span>BIG IDEAS.</span>
+
+    </h1>
+
+
+    <p>
+
+      Your 1rs.shop papercraft arrives flat on A5 paper.
+      Follow the simple lines, cut, fold and turn it
+      into a tiny world you can hold.
+
+    </p>
+
+
+    <a
+      href="#steps"
+      class="hero-button"
+    >
+
+      LEARN HOW IT WORKS →
+
+    </a>
+
+  </div>
+
+
+
+  <!-- PAPER DEMO -->
+
+  <div class="paper-demo">
+
+    <div class="instruction-paper">
+
+      <div class="paper-fold"></div>
+
+      <div class="sheet-title">
+        1RS.SHOP / BUILD SHEET
+      </div>
+
+      <div class="sheet-line"></div>
+
+
+      <div class="fake-house">
+
+        <div class="fake-roof"></div>
+
+        <div class="fake-window one"></div>
+
+        <div class="fake-window two"></div>
+
+        <div class="fake-door"></div>
+
+      </div>
+
+
+      <div class="cut-line">
+
+        - - - CUT ALONG THE LINE - - -
+
+      </div>
+
+    </div>
+
+
+    <div class="floating-scissors">
+      ✂️
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+HOW IT WORKS
+====================================================== -->
+
+<section
+  class="section"
+  id="steps"
+>
+
+  <div class="section-heading">
+
+    <h2>
+
+      Four steps.<br>
+      One tiny world.
+
+    </h2>
+
+    <p>
+
+      You don't need special tools or complicated
+      instructions. Just your printed sheet,
+      scissors and a little patience.
+
+    </p>
+
+  </div>
+
+
+
+  <div class="steps">
+
+
+    <div class="step">
+
+      <div class="step-number">
+        STEP 01
+      </div>
+
+      <div class="step-icon">
+        🛍️
+      </div>
+
+      <h3>
+        Choose
+      </h3>
+
+      <p>
+
+        Pick a papercraft from the 1rs.shop
+        collection.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="step">
+
+      <div class="step-number">
+        STEP 02
+      </div>
+
+      <div class="step-icon">
+        ✂️
+      </div>
+
+      <h3>
+        Cut
+      </h3>
+
+      <p>
+
+        Carefully cut around the outside
+        lines of your printed design.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="step">
+
+      <div class="step-number">
+        STEP 03
+      </div>
+
+      <div class="step-icon">
+        📐
+      </div>
+
+      <h3>
+        Fold
+      </h3>
+
+      <p>
+
+        Fold along the marked lines.
+        Crease gently for a clean finish.
+
+      </p>
+
+    </div>
+
+
+
+    <div class="step">
+
+      <div class="step-number">
+        STEP 04
+      </div>
+
+      <div class="step-icon">
+        🏠
+      </div>
+
+      <h3>
+        Build
+      </h3>
+
+      <p>
+
+        Glue the tabs together and watch
+        your flat sheet become a 3D creation.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+SYMBOL GUIDE
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-heading">
+
+    <h2>
+
+      Learn the<br>
+      paper language.
+
+    </h2>
+
+    <p>
+
+      Every 1rs.shop design uses simple symbols
+      to tell you what to cut, fold and glue.
+
+    </p>
+
+  </div>
+
+
+
+  <div class="symbols">
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        ✂️
+      </div>
+
+      <div>
+
+        <h3>
+          Solid line
+        </h3>
+
+        <p>
+          Cut along this line.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        ┄
+      </div>
+
+      <div>
+
+        <h3>
+          Dashed line
+        </h3>
+
+        <p>
+          Fold along this line.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        ▸
+      </div>
+
+      <div>
+
+        <h3>
+          Arrow
+        </h3>
+
+        <p>
+          Shows the direction of the fold.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        +
+      </div>
+
+      <div>
+
+        <h3>
+          Glue tab
+        </h3>
+
+        <p>
+          Apply a small amount of glue here.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        01
+      </div>
+
+      <div>
+
+        <h3>
+          Number
+        </h3>
+
+        <p>
+          Match numbered tabs together.
+        </p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="symbol">
+
+      <div class="symbol-mark">
+        ↻
+      </div>
+
+      <div>
+
+        <h3>
+          Turn
+        </h3>
+
+        <p>
+          Rotate the piece before joining.
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+TIPS
+====================================================== -->
+
+<section class="section">
+
+  <div class="tips">
+
+    <div class="tips-content">
+
+      <small>
+        BUILDER'S NOTES
+      </small>
+
+      <h2>
+        Make your<br>
+        first one easier.
+      </h2>
+
+
+      <div class="tip-list">
+
+
+        <div class="tip">
+
+          <div class="tip-number">
+            1
+          </div>
+
+          <p>
+
+            Use sharp scissors. Small,
+            clean cuts make a surprisingly
+            big difference.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+          <div class="tip-number">
+            2
+          </div>
+
+          <p>
+
+            Fold the lines before adding glue.
+            It makes assembly much easier.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+          <div class="tip-number">
+            3
+          </div>
+
+          <p>
+
+            Use a small amount of glue.
+            Too much can soften the paper.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="tip">
+
+          <div class="tip-number">
+            4
+          </div>
+
+          <p>
+
+            Let the glue set before moving
+            your finished papercraft.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+CUSTOM CTA
+====================================================== -->
+
+<section class="custom">
+
+  <div class="custom-box">
+
+    <div>
+
+      <h2>
+
+        Ready to make<br>
+        something yours?
+
+      </h2>
+
+      <p>
+
+        Turn your favourite photo into a custom
+        papercraft and build something nobody
+        else has.
+
+      </p>
+
+    </div>
+
+
+    <a
+      href="custom.html"
+      class="custom-button"
+    >
+
+      CREATE CUSTOM PAPERCRAFT →
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+FOOTER
+====================================================== -->
+
+<footer>
+
+  <div class="footer">
+
+    <div>
+
+      <div class="footer-logo">
+
+        1rs<span>.</span>shop
+
+      </div>
+
+      <div
+        class="footer-text"
+        style="margin-top:8px;"
+      >
+
+        Small price. Big imagination.
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-text">
+
+      © 2026 1rs.shop
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
